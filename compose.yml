@@ -11,7 +11,7 @@ services:
       - "8089:8089"
     restart: always
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3307/ski?&createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/ski?&createDatabaseIfNotExist=true
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
       spring.jpa.hibernate.ddl-auto : update
@@ -31,7 +31,7 @@ services:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=ski
     ports:
-      - "3307:3306"
+      - "3306:3306"
     restart: unless-stopped
     volumes:
       - db:/var/lib/mysql
